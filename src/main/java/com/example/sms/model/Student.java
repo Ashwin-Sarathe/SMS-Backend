@@ -20,6 +20,6 @@ public class Student {
     private String phoneNumber;
     private LocalDate dob;
     private Gender gender;
-    private Department departmentId;
+    private Department department;
     private LocalDate enrollmentDate;
 }

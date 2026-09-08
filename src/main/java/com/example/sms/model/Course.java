@@ -16,5 +16,5 @@ public class Course {
     @Indexed(unique = true)
     private String code;
     private int credits;
-    private Department departmentId;
+    private Department department;
 }
