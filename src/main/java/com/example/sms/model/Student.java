@@ -13,15 +13,13 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class Student {
     @Id
-    private String Id;
+    private String id;
     private String name;
     @Indexed(unique = true)
     private String email;
-    @Indexed(unique = true)
     private String phoneNumber;
     private LocalDate dob;
     private Gender gender;
     private String department;
-    //private Role role;
     private LocalDate enrollmentDate;
 }
