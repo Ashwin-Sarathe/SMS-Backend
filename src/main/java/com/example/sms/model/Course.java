@@ -6,13 +6,15 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "departments")
+@Document(collection = "courses")
 @Data
 @NoArgsConstructor
-public class Department {
+public class Course {
     @Id
     private String id;
-    @Indexed(unique=true)
+    @Indexed(unique = true)
     private String name;
-    private String description;
+    private String code;
+    private int credits;
+    private String department;
 }
