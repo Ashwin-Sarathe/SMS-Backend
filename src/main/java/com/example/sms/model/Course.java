@@ -12,8 +12,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Course {
     @Id
     private String id;
-    @Indexed(unique = true)
     private String name;
+    @Indexed(unique = true)
     private String code;
     private int credits;
     private String department;
