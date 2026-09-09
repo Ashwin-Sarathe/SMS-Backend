@@ -15,7 +15,10 @@ public class DepartmentService {
     }
 
     public void createDepartment(Department department){
-        departmentRepository.save(department);
+        String deptName = department.getName();
+        if(!departmentRepository.existsByName(deptName)) {
+            departmentRepository.save(department);
+        }
     }
     public Optional<Department> getDepartmentById(String id){
         return departmentRepository.findById(id);
