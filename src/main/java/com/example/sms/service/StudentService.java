@@ -24,9 +24,9 @@ public class StudentService {
         return studentRepository.findAll();
     }
     public void deleteStudentById(String id){
-        Optional<Student> optionalStudent = studentRepository.getStudentById(id);
-        if(optionalStudent.isPresent()){
-            studentRepository.delete(optionalStudent.get());
+        boolean studentExists = studentRepository.existsById(id);
+        if(studentExists){
+            studentRepository.deleteById(id);
         }
     }
 }
