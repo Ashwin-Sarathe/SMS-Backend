@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@RestController("student")
+@RestController("/students")
 public class StudentController {
     StudentService studentService;
     StudentController(StudentService studentService){
